@@ -9,7 +9,7 @@ The schema in this design is for Role Based Identity and assumes Windows Authent
 * A Role can be Admin, PowerUser, User
 * Roles have associated Permissions, e.g. read, create, update, delete
 * Multiple Permissions are assigned to each Role
-* Note datatype varchar(50) has been defined generically for most columns but we can definately be more specific to fit the usecases more precisely
+* Note datatype varchar(50) has been defined as such for brevity for most columns but without time contraints should be modelled more closely to a standard specifification
 
 ### Other notes
 * Database First approach with scaffold was used to initialise the models and CRUD controllers
