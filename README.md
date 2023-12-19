@@ -1,5 +1,5 @@
 # CMC Backend
-Dotnet Core Web Api utilising SQL Server Database
+Dotnet Core Web Api (continuing the todo theme) utilising SQL Server Database.
 
 ## Solution notes
 ### Database Design
