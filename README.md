@@ -3,7 +3,7 @@ Dotnet Core Web Api (continuing the todo theme) utilising SQL Server Database.
 
 ## Solution notes
 ### Database Design
-A minimalist approach was done for authentication/authorisation covering users, roles and their claims. I have made this tradeoff in lieu of time as the standard schema is boilerplate covered by ASP.NET Core Identity.
+A minimalist approach was done for authentication/authorisation covering users, roles and their claims. I have made this tradeoff in lieu of time as the standard 7 table schema is boilerplate covered by ASP.NET Core Identity.
 The schema in this design is for Role Based Identity.
 * A User is assigned a single Role.
 * A Role can be Admin, PowerUser, User
