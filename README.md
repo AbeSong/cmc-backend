@@ -3,11 +3,12 @@ Dotnet Core Web Api (continuing the todo theme) utilising SQL Server Database.
 
 ## Solution notes
 ### Database Design
-A minimalist approach was done for authentication/authorisation covering users, roles and their claims. I have made this tradeoff in lieu of time as the standard schema with boilerplate is well covered by ASP.NET Core Identity.
-To summarise my design for Web API auth:
+A minimalist approach was done for authentication/authorisation covering users, roles and their claims. I have made this tradeoff in lieu of time as the standard schema is boilerplate covered by ASP.NET Core Identity.
+The schema in this design is for Role Based Identity.
 * A User is assigned a single Role.
-* A Role has multiple Claims/Permissions associated
-* From here, various API Authentication providers can provide this service e.g. one can issue a claims token and Authorisation is persisted on subsequent API call.
+* A Role can be Admin, PowerUser, User
+* Roles have associated Permissions, e.g. read, create, update, delete
+* Multiple Permissions are assigned to each Role
 
 ### Other notes
 * Database First approach with scaffold was used to initialise the models and CRUD controllers
@@ -27,5 +28,6 @@ To summarise my design for Web API auth:
 
 ## Setup
 1. `git clone https://github.com/AbeSong/cmc-backend.git`
-2. Open solution and run migrations `update-database`
-3. Start debugging (F5) to seed initial data
+2. Update ConnectionStrings by replacing `localhost\\SQLEXPRESS` in appsettings.json to your SQL Server if this is not your default
+3. Open solution and run migrations `update-database`
+4. Start debugging (F5) to seed initial data
