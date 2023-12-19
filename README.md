@@ -13,9 +13,10 @@ The schema in this design is for Role Based Identity.
 ### Other notes
 * Database First approach with scaffold was used to initialise the models and CRUD controllers
 * Appropriate tables are seeded
-* I have provided 2 api endpoints which cover the following non-trivial queries (we can definitely be more complex with the right data):
+* I have provided 2 API endpoints which cover the following non-trivial queries (we can definitely be more complex with the right data):
 1. LINQ to entity query for getting list of completed Todos within last 7 days
 2. Query with Raw SQL to a obtain completed query count by user utilising a join to get UserName using a specified DTO
+* Swagger can be used on application start to trigger these APIs
 * Async has been used for initial seeding and API endpoints
 * Error messages are kept generic to avoid unnecessary information leakage
 
