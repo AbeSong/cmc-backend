@@ -142,7 +142,7 @@ namespace TodoProject.Controllers
         {
           if (_context.Todos == null)
           {
-              return Problem("Entity set 'SimpleDbContext.Todos'  is null.");
+              return Problem("Unable to create Todo");
           }
             _context.Todos.Add(todo);
             await _context.SaveChangesAsync();
